@@ -1,580 +1,1185 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Portfolio</title>
-  </head>
-  <body class="font-mono">
-    <header>
-      <nav
-        class="hidden md:flex items-center justify-between px-4 sm:px-8 md:px-14 py-3 border-b border-gray-100"
-      >
-        <div class="text-gray-800 font-semibold text-lg">GL</div>
-        <ul class="flex space-x-8 text-gray-700">
-          <li><a href="#sobre" class="hover:text-gray-950 transition">Sobre</a></li>
-          <li>
-            <a href="#habilidades" class="hover:text-gray-950 transition">Habilidades</a>
-          </li>
-          <li>
-            <a href="#projetos" class="hover:text-gray-950 transition">Projetos</a>
-          </li>
-          <li>
-            <a href="#contato" class="hover:text-gray-950 transition">Contato</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guilherme Lima — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --color-primary: #B8FF00;
+    --color-primary-glow: #CCFF33;
+    --color-bg-light: #F7F7F5;
+    --color-bg-dark: #0F0F0F;
+    --color-bg-card-dark: #1A1A1A;
+    --color-text-heading: #0A0A0A;
+    --color-text-heading-dark: #FFFFFF;
+    --color-text-body: #4A4A4A;
+    --color-text-body-dark: #A0A0A0;
+    --color-text-muted: #888888;
+    --color-border-light: #E0E0E0;
+    --color-border-dark: #2A2A2A;
+    --color-border-accent: #B8FF00;
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    --shadow-card: 0 4px 20px rgba(0,0,0,0.10);
+    --shadow-card-dark: 0 4px 24px rgba(0,0,0,0.40);
+    --shadow-card-hover: 0 8px 32px rgba(184,255,0,0.18);
+    --shadow-glow: 0 0 40px rgba(184,255,0,0.35);
+    --gradient-mesh: radial-gradient(ellipse 65% 55% at 85% 35%, rgba(184,255,0,0.60) 0%, rgba(184,255,0,0.20) 45%, transparent 75%);
+    --spacing-section: 100px;
+    --max-width: 1200px;
+  }
 
-    <main>
-      <section
-        class="flex flex-col justify-center items-center min-h-screen text-center px-4"
-      >
-        <div class="max-w-2xl">
-          <h1 class="text-xl text-center">Guilherme Lima</h1>
-          <p class="text-gray-500 mt-5">
-            Desenvolvedor Fullstack especializado em criar experiências digitais
-            modernas e escaláveis. Apaixonado por código limpo, arquitetura
-            sólida e resolver problemas complexos.
-          </p>
-        </div>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <div class="flex gap-4 mt-8">
-          <a
-            href="https://github.com/ghduuep" target="_blank"
-            class="bg-gray-300 text-gray-600 rounded-full p-2 hover:bg-gray-900 transition hover:text-gray-100"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-github-icon lucide-github"
-            >
-              <path
-                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-              />
-              <path d="M9 18c-4.51 2-5-2-7-2" /></svg
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/guilhermehdlima/" target="_blank"
-            class="bg-gray-300 text-gray-600 rounded-full p-2 hover:bg-gray-900 transition hover:text-gray-100"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-linkedin-icon lucide-linkedin"
-            >
-              <path
-                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-              />
-              <rect width="4" height="12" x="2" y="9" />
-              <circle cx="4" cy="4" r="2" /></svg
-          ></a>
-          <a
-            href="mailto:ghduep@outlook.com" target="_blank"
-            class="bg-gray-300 text-gray-600 rounded-full p-2 hover:bg-gray-900 transition hover:text-gray-100"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-mail-icon lucide-mail"
-            >
-              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-              <rect x="2" y="4" width="20" height="16" rx="2" /></svg
-          ></a>
-        </div>
+  html { scroll-behavior: smooth; }
 
-        <div class="mt-12">
-          <a
-            href="#projetos"
-            class="flex gap-1 text-gray-500 hover:text-gray-700 transition animate-bounce"
-            >Ver projetos<svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-down-icon lucide-arrow-down"
-            >
-              <path d="M12 5v14" />
-              <path d="m19 12-7 7-7-7" /></svg
-          ></a>
-        </div>
-      </section>
+  body {
+    font-family: var(--font-body);
+    background: var(--color-bg-light);
+    color: var(--color-text-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
 
-      <section class="flex flex-col items-center bg-gray-100 py-20 px-4" id="sobre">
-        <h2 class="text-lg">Sobre mim</h2>
-        <div class="max-w-4xl space-y-6 mt-12">
-          <p class="text-gray-600">
-            Olá! Sou Guilherme Lima, desenvolvedor fullstack com experiência em
-            criar soluções web completas, desde o design da interface até a
-            arquitetura do backend.
-          </p>
-          <p class="text-gray-600">
-            Trabalho com tecnologias modernas como React, Node.js, TypeScript e
-            banco de dados relacionais e não-relacionais. Meu foco está em
-            entregar código de qualidade, mantível e que solucione problemas
-            reais.
-          </p>
-          <p class="text-gray-600">
-            Quando não estou codando, gosto de estudar novas tecnologias,
-            contribuir com projetos open source e compartilhar conhecimento com
-            a comunidade.
-          </p>
-        </div>
-      </section>
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+    background: rgba(247,247,245,0.82);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  nav.scrolled { border-color: var(--color-border-light); }
 
-      <section class="py-20" id="habilidades">
-        <h2 class="text-lg text-center">Habilidades</h2>
-        <div
-          class="max-w-4xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center"
-        >
-          <div>
-            <h3 class="font-semibold text-lg mb-3">Frontend</h3>
-            <ul class="space-y-1 list-disc list-inside">
-              <li><span class="text-gray-500">React</span></li>
-              <li><span class="text-gray-500">Tailwind CSS</span></li>
-              <li><span class="text-gray-500">Typescript</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg mb-3">Backend</h3>
-            <ul class="space-y-1 list-disc list-inside">
-              <li><span class="text-gray-500">Node.js</span></li>
-              <li><span class="text-gray-500">Express</span></li>
-              <li><span class="text-gray-500">MongoDB</span></li>
-              <li><span class="text-gray-500">PostgreSQL</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg mb-3">Ferramentas</h3>
-            <ul class="space-y-1 list-disc list-inside">
-              <li><span class="text-gray-500">Git</span></li>
-              <li><span class="text-gray-500">Docker</span></li>
-              <li><span class="text-gray-500">AWS</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--color-text-heading);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--color-primary); }
 
-      <section class="bg-gray-100 py-20 px-4" id="projetos">
-        <h2 class="text-lg text-center">Projetos</h2>
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto"
-        >
-          <div
-            class="space-y-6 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition"
-          >
-            <div class="flex items-center justify-between">
-              <h3 class="text-md">Titan Telecom</h3>
-              <div class="flex gap-2">
-                <a href="https://github.com/ghduuep/titan-telecom" target="_blank">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-github-icon lucide-github"
-                  >
-                    <path
-                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                    />
-                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg
-                ></a>
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 14px; font-weight: 500;
+    color: var(--color-text-heading);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--color-primary); }
 
-                <a href="https://titan-telecom.vercel.app/" target="_blank">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-external-link-icon lucide-external-link"
-                  >
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14 21 3" />
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <p class="text-gray-600">
-              Site institucional feito para a empresa de telecomunicações Titan Telecom.
-            </p>
-            <div class="flex gap-2">
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >HTML</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >Javascript</span
-              >
-            </div>
-          </div>
+  .btn-cta {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--color-text-heading);
+    color: #fff;
+    border: none; border-radius: var(--radius-full);
+    padding: 10px 20px;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .btn-cta:hover { background: #1A1A1A; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  .btn-cta .icon-dot {
+    width: 22px; height: 22px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #0A0A0A;
+    flex-shrink: 0;
+  }
 
-          <div
-            class="space-y-6 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition"
-          >
-            <div class="flex items-center justify-between">
-              <h3 class="text-md">E-commerce platform</h3>
-              <div class="flex gap-2">
-                <a href="">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-github-icon lucide-github"
-                  >
-                    <path
-                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                    />
-                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg
-                ></a>
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 120px 48px 80px;
+    background: var(--color-bg-light);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-mesh);
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* Subtle noise texture */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0; opacity: 0.4;
+  }
 
-                <a href="">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-external-link-icon lucide-external-link"
-                  >
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14 21 3" />
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <p class="text-gray-600">
-              Uma plataforma completa de e-commerce construída com React e
-              Node.js.
-            </p>
-            <div class="flex gap-2">
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >React</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >Node.js</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >MongoDB</span
-              >
-            </div>
-          </div>
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 720px;
+  }
 
-          <div
-            class="space-y-6 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition"
-          >
-            <div class="flex items-center justify-between">
-              <h3 class="text-md">E-commerce platform</h3>
-              <div class="flex gap-2">
-                <a href="">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-github-icon lucide-github"
-                  >
-                    <path
-                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                    />
-                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg
-                ></a>
+  .hero-social {
+    position: absolute;
+    left: -24px; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column;
+    gap: 16px; z-index: 2;
+  }
+  .hero-social a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+    display: flex; align-items: center;
+  }
+  .hero-social a:hover { color: var(--color-text-heading); }
 
-                <a href="">
-                  <svg
-                    class="text-gray-600 hover:text-gray-900 transition"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-external-link-icon lucide-external-link"
-                  >
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14 21 3" />
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <p class="text-gray-600">
-              Uma plataforma completa de e-commerce construída com React e
-              Node.js.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >React</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >Node.js</span
-              >
-              <span
-                class="text-sm text-gray-700 rounded-full bg-gray-200 px-3 py-1"
-                >MongoDB</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+    padding: 6px 14px;
+    font-size: 12px; font-weight: 500;
+    color: var(--color-text-heading);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-card);
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0 0 6px var(--color-primary);
+    animation: pulse 2s ease infinite;
+  }
 
-      <section class="flex flex-col items-center py-20 px-4" id="contato">
-        <h2 class="text-lg">Contato</h2>
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+  }
 
-        <div
-          class="grid md:grid-cols-2 gap-16 w-full max-w-4xl mt-10 items-start"
-        >
-          <div>
-            <p class="text-lg font-semibold text-gray-800 mb-4">
-              Vamos conversar?
-            </p>
-            <p class="text-gray-600">
-              Estou sempre aberto a novas oportunidades e colaborações. Envie
-              uma mensagem e vamos criar algo incrível juntos!
-            </p>
+  .hero-title {
+    font-size: clamp(40px, 5.5vw, 68px);
+    line-height: 1.08;
+    font-weight: 800;
+    color: var(--color-text-heading);
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
 
-            <div class="space-y-4 mt-6">
-              <div class="flex items-center gap-2">
-                <svg
-                  class="text-gray-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                </svg>
-                <p class="text-gray-600">ghduep@outlook.com</p>
-              </div>
+  .hero-title .chip {
+    display: inline-block;
+    background: var(--color-text-heading);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    padding: 0px 12px 2px;
+    margin: 0 4px;
+    font-weight: 800;
+    vertical-align: baseline;
+    line-height: inherit;
+  }
+  .hero-title .chip-lime {
+    background: var(--color-primary);
+    color: var(--color-text-heading);
+  }
 
-              <div class="flex items-center gap-2">
-                <svg
-                  class="text-gray-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-                  />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <p class="text-gray-600">Altinópolis, Brasil</p>
-              </div>
-            </div>
-          </div>
+  .hero-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-body);
+    max-width: 440px;
+    margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
 
-          <form class="space-y-4" action="https://formspree.io/f/xnnlqwlb" method="POST">
-            <div>
-              <label for="name" class="text-gray-700 mb-2 block">Nome</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Seu nome"
-                class="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-gray-800"
-                required
-              />
-            </div>
+  .hero-actions {
+    display: flex; gap: 12px; align-items: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
 
-            <div>
-              <label for="email" class="text-gray-700 mb-2 block">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seu@email.com"
-                class="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-gray-800"
-                required
-              />
-            </div>
+  .btn-primary {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--color-text-heading);
+    color: #fff;
+    border: none; border-radius: var(--radius-full);
+    padding: 12px 24px; font-size: 14px; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: #222; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  .btn-primary .arrow-wrap {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--color-primary);
+    display: flex; align-items: center; justify-content: center;
+    color: #0A0A0A; font-size: 13px;
+  }
 
-            <div>
-              <label for="message" class="text-gray-700 mb-2 block"
-                >Mensagem</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Sua mensagem..."
-                class="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-gray-800"
-                required
-              ></textarea>
-            </div>
+  .btn-ghost {
+    display: flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--color-text-heading);
+    border: 1.5px solid var(--color-text-heading);
+    border-radius: var(--radius-full);
+    padding: 11px 24px; font-size: 14px; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover { background: var(--color-text-heading); color: #fff; }
 
-            <button
-              type="submit"
-              class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md flex items-center justify-center gap-2 w-full transition"
-            >
-              Enviar mensagem
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m22 2-7 20-4-9-9-4Z" />
-                <path d="M22 2 11 13" />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
+  /* Hero Visual */
+  .hero-visual {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
 
-    <footer
-      class="bg-gray-900 flex flex-col md:flex-row justify-between px-6 sm:px-10 md:px-12 py-20 items-center"
-    >
-      <p class="text-gray-400">
-        &copy; 2025 Guilherme Lima. Todos os direitos reservados.
-      </p>
-      <div class="flex space-x-6 mt-4">
-        <a href="https://github.com/ghduuep" target="_blank" class="text-gray-400 hover:text-gray-100 transition"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-github-icon lucide-github"
-          >
-            <path
-              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-            />
-            <path d="M9 18c-4.51 2-5-2-7-2" /></svg
-        ></a>
-        <a href="https://www.linkedin.com/in/guilhermehdlima" target="_blank" class="text-gray-400 hover:text-gray-100 transition"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-linkedin-icon lucide-linkedin"
-          >
-            <path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-            />
-            <rect width="4" height="12" x="2" y="9" />
-            <circle cx="4" cy="4" r="2" /></svg
-        ></a>
-        <a href="mailto:ghduep@outlook.com" target="_blank" class="text-gray-400 hover:text-gray-100 transition"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-mail-icon lucide-mail"
-          >
-            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-            <rect x="2" y="4" width="20" height="16" rx="2" /></svg
-        ></a>
+  .avatar-frame {
+    width: 340px; height: 400px;
+    background: linear-gradient(145deg, #e8e8e4 0%, #d0d0c8 100%);
+    border-radius: 180px 180px 140px 140px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.12), 0 0 0 1px var(--color-border-light);
+  }
+
+  /* Abstract person silhouette */
+  .avatar-frame::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 220px; height: 300px;
+    background: linear-gradient(180deg, #c4c4bc 0%, #b0b0a8 100%);
+    border-radius: 100px 100px 0 0;
+  }
+  .avatar-frame::after {
+    content: '';
+    position: absolute;
+    top: 60px; left: 50%; transform: translateX(-50%);
+    width: 100px; height: 100px;
+    background: #bdbdb5;
+    border-radius: 50%;
+  }
+
+  /* Floating cards around avatar */
+  .float-card {
+    position: absolute;
+    background: #fff;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    box-shadow: var(--shadow-card);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-heading);
+    display: flex; align-items: center; gap: 8px;
+    animation: float 4s ease-in-out infinite;
+    backdrop-filter: blur(8px);
+  }
+  .float-card .fc-icon {
+    width: 28px; height: 28px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0;
+  }
+  .float-card.fc-1 {
+    top: 20px; right: -20px;
+    animation-delay: 0s;
+  }
+  .float-card.fc-2 {
+    bottom: 80px; right: -30px;
+    animation-delay: 1.5s;
+  }
+  .float-card.fc-3 {
+    bottom: 20px; left: -30px;
+    animation-delay: 0.8s;
+  }
+  .float-card.fc-4 {
+    top: 80px; left: -40px;
+    animation-delay: 2.2s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .fc-sub { font-size: 10px; color: var(--color-text-muted); font-weight: 400; display: block; margin-top: 1px; }
+
+  .lime-ring {
+    position: absolute;
+    width: 360px; height: 420px;
+    border: 2px dashed rgba(184,255,0,0.35);
+    border-radius: 190px 190px 150px 150px;
+    top: -10px; left: 50%; transform: translateX(-50%);
+    animation: spin 20s linear infinite;
+  }
+  @keyframes spin { from { transform: translateX(-50%) rotate(0deg); } to { transform: translateX(-50%) rotate(360deg); } }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: var(--color-bg-light);
+    padding: 32px 48px;
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .stats-inner {
+    max-width: var(--max-width); margin: 0 auto;
+    display: flex; align-items: center; gap: 0;
+  }
+  .stat-item {
+    flex: 1; text-align: center;
+    padding: 0 24px;
+    border-right: 1px solid var(--color-border-light);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-size: 36px; font-weight: 800;
+    color: var(--color-text-heading);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .stat-num span { color: var(--color-primary); }
+  .stat-label {
+    font-size: 13px; color: var(--color-text-muted);
+    margin-top: 4px;
+  }
+
+  /* ── DARK SECTION ── */
+  .dark-section {
+    background: var(--color-bg-dark);
+    border-radius: 28px 28px 0 0;
+    margin-top: -28px;
+    position: relative; z-index: 2;
+    padding: var(--spacing-section) 48px;
+  }
+  .section-inner { max-width: var(--max-width); margin: 0 auto; }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff;
+    color: var(--color-text-heading);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+    padding: 5px 14px;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .section-label-dark {
+    background: var(--color-bg-card-dark);
+    color: var(--color-text-body-dark);
+    border-color: var(--color-border-dark);
+  }
+  .section-label .label-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--color-primary);
+  }
+
+  .section-title-dark {
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 800; color: var(--color-text-heading-dark);
+    letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .section-title-dark em { color: var(--color-primary); font-style: normal; }
+
+  .section-sub {
+    font-size: 15px; color: var(--color-text-body-dark);
+    line-height: 1.65; max-width: 500px;
+    margin-bottom: 48px;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-card {
+    background: var(--color-bg-card-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .skill-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+  .skill-icon {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-primary);
+    background: rgba(184,255,0,0.1);
+    border: 1px solid rgba(184,255,0,0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .skill-name {
+    font-size: 15px; font-weight: 600;
+    color: var(--color-text-heading-dark);
+    margin-bottom: 6px;
+  }
+  .skill-desc {
+    font-size: 13px; color: var(--color-text-body-dark);
+    line-height: 1.6;
+  }
+
+  /* ── LIGHT SECTION: ABOUT ── */
+  .light-section {
+    background: var(--color-bg-light);
+    padding: var(--spacing-section) 48px;
+    position: relative; overflow: hidden;
+  }
+  .light-section::before {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(184,255,0,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-grid {
+    max-width: var(--max-width); margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center;
+  }
+
+  .section-title-light {
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 800; color: var(--color-text-heading);
+    letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .section-title-light em { 
+    font-style: normal;
+    background: var(--color-text-heading);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 10px 3px;
+  }
+
+  .about-text {
+    font-size: 15px; line-height: 1.75;
+    color: var(--color-text-body);
+    margin-bottom: 20px;
+  }
+
+  .about-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 12px; font-weight: 500;
+    background: #fff;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+    padding: 5px 14px;
+    color: var(--color-text-heading);
+    transition: all 0.2s;
+  }
+  .tag:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(184,255,0,0.15);
+  }
+
+  /* Code block style */
+  .code-block {
+    background: var(--color-bg-dark);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    border: 1px solid var(--color-border-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .code-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .code-dots {
+    display: flex; gap: 6px; margin-bottom: 20px;
+  }
+  .code-dots span {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .code-dots .d1 { background: #FF5F57; }
+  .code-dots .d2 { background: #FEBC2E; }
+  .code-dots .d3 { background: #28C840; }
+  .code-line {
+    font-family: var(--font-mono);
+    font-size: 13px; line-height: 1.9;
+    color: var(--color-text-body-dark);
+  }
+  .code-line .c-key { color: #C792EA; }
+  .code-line .c-str { color: var(--color-primary); }
+  .code-line .c-val { color: #82AAFF; }
+  .code-line .c-muted { color: #546E7A; }
+
+  /* ── PROCESS SECTION ── */
+  .process-section {
+    background: var(--color-bg-dark);
+    padding: var(--spacing-section) 48px;
+  }
+
+  .process-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-top: 48px;
+  }
+  .process-card {
+    background: var(--color-bg-card-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .process-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card-hover); }
+  .process-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: var(--color-primary);
+  }
+  .process-num {
+    font-family: var(--font-mono);
+    font-size: 11px; color: var(--color-primary);
+    font-weight: 500; letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .process-title {
+    font-size: 16px; font-weight: 700;
+    color: var(--color-text-heading-dark);
+    margin-bottom: 10px;
+  }
+  .process-desc {
+    font-size: 13px; color: var(--color-text-body-dark);
+    line-height: 1.65;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-section {
+    background: var(--color-bg-light);
+    padding: var(--spacing-section) 48px;
+    position: relative; overflow: hidden;
+  }
+  .projects-section::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(184,255,0,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .projects-header {
+    max-width: var(--max-width); margin: 0 auto 48px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    flex-wrap: wrap; gap: 24px;
+  }
+
+  .projects-grid {
+    max-width: var(--max-width); margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .project-card {
+    background: #fff;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .project-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+  .project-card.featured {
+    grid-column: span 2;
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+
+  .project-img {
+    background: linear-gradient(135deg, #e8f5cc 0%, #d0ec90 100%);
+    height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px;
+    position: relative; overflow: hidden;
+  }
+  .project-card.featured .project-img {
+    height: 100%; min-height: 260px;
+  }
+  .project-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(184,255,0,0.3) 0%, transparent 60%);
+  }
+
+  .project-body { padding: 24px; }
+  .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .project-tag {
+    font-family: var(--font-mono);
+    font-size: 10px; font-weight: 500;
+    background: rgba(184,255,0,0.12);
+    color: #5a7a00;
+    border: 1px solid rgba(184,255,0,0.3);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+  }
+  .project-name {
+    font-size: 18px; font-weight: 700;
+    color: var(--color-text-heading);
+    margin-bottom: 8px;
+  }
+  .project-desc {
+    font-size: 14px; color: var(--color-text-body);
+    line-height: 1.65; margin-bottom: 16px;
+  }
+  .project-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 500;
+    color: var(--color-text-heading);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--color-primary);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+  .project-link:hover { color: var(--color-primary); }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--color-bg-dark);
+    border-radius: 28px 28px 0 0;
+    margin-top: -28px;
+    padding: var(--spacing-section) 48px;
+    position: relative; z-index: 2; overflow: hidden;
+  }
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184,255,0,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .contact-inner {
+    max-width: var(--max-width); margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 700px;
+  }
+
+  .contact-big {
+    font-size: clamp(36px, 4.5vw, 60px);
+    font-weight: 800; color: var(--color-text-heading-dark);
+    letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .contact-big span {
+    color: var(--color-primary);
+    display: block;
+  }
+
+  .contact-info { margin-top: 32px; }
+  .contact-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border-dark);
+  }
+  .contact-row:first-child { border-top: 1px solid var(--color-border-dark); }
+  .contact-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(184,255,0,0.12);
+    border: 1px solid rgba(184,255,0,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+  .contact-label {
+    font-size: 11px; color: var(--color-text-muted);
+    letter-spacing: 0.06em; text-transform: uppercase; display: block;
+  }
+  .contact-value {
+    font-size: 14px; font-weight: 500;
+    color: var(--color-text-heading-dark);
+  }
+
+  .contact-form {
+    background: var(--color-bg-card-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    font-size: 12px; font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    display: block; margin-bottom: 8px;
+  }
+  .form-input, .form-textarea {
+    width: 100%;
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-heading-dark);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: var(--color-text-muted); }
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(184,255,0,0.12);
+  }
+  .form-textarea { height: 100px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--color-primary);
+    color: var(--color-text-heading);
+    border: none; border-radius: var(--radius-full);
+    padding: 14px;
+    font-size: 14px; font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+    letter-spacing: 0.01em;
+  }
+  .btn-submit:hover {
+    background: var(--color-primary-glow);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-1px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--color-bg-dark);
+    border-top: 1px solid var(--color-border-dark);
+    padding: 32px 48px;
+  }
+  .footer-inner {
+    max-width: var(--max-width); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-logo {
+    font-size: 16px; font-weight: 800;
+    color: var(--color-text-heading-dark);
+    letter-spacing: -0.02em;
+  }
+  .footer-logo span { color: var(--color-primary); }
+  .footer-copy {
+    font-size: 13px; color: var(--color-text-muted);
+  }
+  .footer-links {
+    display: flex; gap: 24px; list-style: none;
+  }
+  .footer-links a {
+    font-size: 13px; color: var(--color-text-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--color-primary); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .stats-strip { padding: 24px; }
+    .stats-inner { flex-wrap: wrap; }
+    .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid var(--color-border-light); padding: 16px; }
+    .dark-section, .contact-section { padding: 64px 24px; }
+    .light-section, .projects-section { padding: 64px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .project-card.featured .project-img { height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">GL<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="btn-cta">
+    <span class="icon-dot">↗</span>
+    Hire me
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- Left -->
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for freelance &amp; internships
       </div>
-    </footer>
-  </body>
+
+      <h1 class="hero-title">
+        Building
+        <span class="chip">robust</span><br/>
+        software that
+        <br/>actually
+        <span class="chip chip-lime">works.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Hi, I'm Guilherme Lima — a Computer Science student and Software Engineer passionate about crafting clean, scalable applications from back-end architecture to polished user interfaces.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span class="arrow-wrap">↓</span>
+          View my work
+        </a>
+        <a href="#contact" class="btn-ghost">Let's talk</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-num">12<span>+</span></div>
+      <div class="stat-label">Projects delivered</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label">Years of experience</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-num">8<span>+</span></div>
+      <div class="stat-label">Technologies mastered</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label">Passion for code</div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS SECTION (dark) -->
+<section class="dark-section" id="skills">
+  <div class="section-inner">
+    <div class="section-label section-label-dark reveal">
+      <span class="label-dot"></span>
+      Tech Stack
+    </div>
+    <h2 class="section-title-dark reveal">My Extensive List of <em>Skills</em></h2>
+    <p class="section-sub reveal">From algorithms to deployment — I cover the full engineering lifecycle with a strong foundation in CS principles.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">FRONT</div>
+        <div class="skill-name">React & Next.js</div>
+        <div class="skill-desc">Component-driven UIs with SSR, routing and modern state management.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">BACK</div>
+        <div class="skill-name">Node.js & Python</div>
+        <div class="skill-desc">REST APIs, async services, FastAPI, Express and scalable microservices.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">DB</div>
+        <div class="skill-name">Databases</div>
+        <div class="skill-desc">PostgreSQL, MongoDB, Redis — data modeling, indexing and query optimization.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">OPS</div>
+        <div class="skill-name">DevOps & Cloud</div>
+        <div class="skill-desc">Docker, CI/CD pipelines, AWS basics and automated deployment workflows.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">CS</div>
+        <div class="skill-name">Algorithms & DS</div>
+        <div class="skill-desc">Strong theoretical foundation — graphs, dynamic programming, complexity analysis.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">MOB</div>
+        <div class="skill-name">Mobile Dev</div>
+        <div class="skill-desc">React Native and cross-platform apps with smooth UX on iOS and Android.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">GIT</div>
+        <div class="skill-name">Version Control</div>
+        <div class="skill-desc">Git workflows, branching strategies, code reviews and collaborative development.</div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">AI</div>
+        <div class="skill-name">ML Fundamentals</div>
+        <div class="skill-desc">Scikit-learn, data pipelines, model evaluation — applying ML in real projects.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION (light) -->
+<section class="light-section" id="about">
+  <div class="about-grid">
+    <!-- Code block -->
+    <div class="code-block reveal">
+      <div class="code-dots">
+        <span class="d1"></span><span class="d2"></span><span class="d3"></span>
+      </div>
+      <div class="code-line"><span class="c-key">const</span> <span class="c-val">guilherme</span> = {</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">role</span>: <span class="c-str">"Software Engineer"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">degree</span>: <span class="c-str">"Computer Science"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">university</span>: <span class="c-str">"ICMC – USP"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">location</span>: <span class="c-str">"Ribeirão Preto, BR 🇧🇷"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">focus</span>: [</div>
+      <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"Full-Stack Dev"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"Clean Architecture"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"Open Source"</span></div>
+      <div class="code-line">&nbsp;&nbsp;],</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="c-key">status</span>: <span class="c-str">"Available for hire ✅"</span></div>
+      <div class="code-line">};</div>
+      <br/>
+      <div class="code-line"><span class="c-muted">// Always shipping, always learning.</span></div>
+    </div>
+
+    <!-- Text -->
+    <div>
+      <div class="section-label reveal">
+        <span class="label-dot"></span>
+        About me
+      </div>
+      <h2 class="section-title-light reveal">The person <em>behind</em> the code.</h2>
+
+      <p class="about-text reveal">
+        I'm a Computer Science student at ICMC – USP with a deep passion for building things that matter. I believe great software isn't just about making something that works — it's about making it elegant, maintainable, and genuinely useful.
+      </p>
+      <p class="about-text reveal reveal-delay-1">
+        Beyond the screen, I'm driven by curiosity. Whether it's contributing to open-source, exploring new frameworks, or diving into algorithms, I'm always pushing to understand systems at a deeper level.
+      </p>
+
+      <div class="about-tags reveal reveal-delay-2">
+        <span class="tag">TypeScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+  <div class="projects-header reveal">
+    <div>
+      <div class="section-label">
+        <span class="label-dot"></span>
+        Portfolio
+      </div>
+      <h2 class="section-title-light" style="margin-bottom:0">Things I've <em>Built</em></h2>
+    </div>
+    <a href="#" class="btn-ghost">See all projects →</a>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Featured -->
+    <div class="project-card featured reveal">
+      <div class="project-img" style="background: linear-gradient(135deg,#e0f0b0 0%,#c8e870 100%)">
+        🛒
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">Docker</span>
+        </div>
+        <div class="project-name">E-Commerce Platform</div>
+        <div class="project-desc">A full-stack marketplace with real-time inventory, Stripe payments, an admin dashboard and containerized microservices architecture. Handles 1k+ concurrent sessions.</div>
+        <a href="#" class="project-link">View case study ↗</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-img" style="background: linear-gradient(135deg,#d0e8ff 0%,#a8ccf0 100%)">
+        📊
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">ML</span>
+        </div>
+        <div class="project-name">Data Analytics API</div>
+        <div class="project-desc">REST API that processes and visualizes large datasets with ML-powered insights and automated reporting.</div>
+        <a href="#" class="project-link">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-img" style="background: linear-gradient(135deg,#ffe0d0 0%,#f0c0a8 100%)">
+        📱
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">React Native</span>
+          <span class="project-tag">Firebase</span>
+        </div>
+        <div class="project-name">Study Planner App</div>
+        <div class="project-desc">Mobile productivity app for university students with smart scheduling, progress tracking and push notifications.</div>
+        <a href="#" class="project-link">View on GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label section-label-dark reveal">
+        <span class="label-dot"></span>
+        Get In Touch
+      </div>
+      <h2 class="contact-big reveal">
+        Let's build something
+        <span>great together.</span>
+      </h2>
+      <p class="section-sub reveal" style="margin-bottom:0">
+        Whether you have a project in mind, a question, or just want to connect — my inbox is always open.
+      </p>
+
+      <div class="contact-info reveal reveal-delay-1">
+        <div class="contact-row">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">guilherme@lima.dev</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">💼</div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/guilhermelima</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/guilhermelima</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Guilherme Lima<span>.</span></div>
+    <span class="footer-copy">© 2026 · Designed with ♥ in Brazil</span>
+    <ul class="footer-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+
+</script>
+</body>
 </html>
